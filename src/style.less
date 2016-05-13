@@ -1,0 +1,219 @@
+@controlPanelNormalBg: rgb(188, 188, 188);
+@controlPanelEditBg: rgb(81, 153, 219);
+@controlPanelErrBg: rgb(246, 193, 192);
+@controlPanelErrColor: rgb(224, 69, 65);
+@controlPanelWidth: 350px;
+@controlPanelHeight: 100vh;
+@controlPanelFontSize: 14px;
+@controlPanelLineHeight: 20px;
+@matrixLeftMargin: 25px;
+@matrixNameFontSizes: 24px;
+@baseFont: 'Segoe UI';
+
+.mixInlineFloat {
+    display: inline-block;
+    float: left;
+}
+
+.mixMatrixContainerAbsolut {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    left: 10px;
+    right: 10px;
+    background: rgb(255, 255, 255);
+}
+
+body {
+    font-family: @baseFont;
+}
+
+.controlsPanel {
+    width: @controlPanelWidth;
+    height: @controlPanelHeight;
+    background: @controlPanelNormalBg;
+    font-size: @controlPanelFontSize;
+    line-height: @controlPanelLineHeight;
+    .mixInlineFloat;
+}
+
+.controlsPanelEdit {
+    background: @controlPanelEditBg;
+}
+
+.controlsPanelErr {
+    background: @controlPanelErrBg;
+    p {
+        color: @controlPanelErrColor;
+        margin-top: 50px;
+    }
+}
+
+#matrixOp {
+    margin-left: 30px;
+}
+
+#mulContainer {
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    #mulButtonPart1 {
+        .mixInlineFloat;
+        background: rgb(73, 166, 27);
+        color: rgb(255, 255, 255);
+        border-radius: 2px;
+        padding: 10px 15px;
+        font-size: @controlPanelFontSize + 2;
+        border: 1px solid rgba(54, 122, 20, .5);
+        border-right: 0;
+    }
+    #mulButtonPart2 {
+        .mixInlineFloat;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-left: 10px solid #49a61b;
+        border-bottom: 20px solid transparent;
+    }
+}
+
+#viceVersa {
+    margin-bottom: 50px;
+}
+
+#addRow,
+#removeRow,
+#clearMatrix {
+    margin-bottom: 10px;
+}
+
+#addRow,
+#addColumn,
+#removeRow,
+#removeColumn,
+label {
+    margin-right: 10px;
+}
+
+#radioMatrixA,
+#radioMatrixB {
+    margin-bottom: 15px;
+}
+
+button {
+    font-family: @baseFont;
+    font-size: @controlPanelFontSize;
+    line-height: 25px;
+    background: rgb(244, 244, 244);
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(237, 237, 237));
+    border: 1px solid rgba(90, 90, 90, 0.5);
+}
+
+button:hover {
+    background: rgb(232, 232, 232);
+    background-image: linear-gradient(to bottom, rgb(241, 241, 241), rgb(223, 223, 223));
+}
+
+button:active {
+    background: rgb(217, 217, 217);
+    outline: none;
+}
+
+button:disabled {
+    background: rgb(242, 242, 242);
+}
+
+button:focus {
+    outline: 2px solid rgb(81, 153, 219)
+}
+
+img {
+    vertical-align: text-bottom;
+}
+
+.matrixContainer {
+    .mixInlineFloat
+}
+
+input[type=text] {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 5px;
+    padding-top: 15px;
+    border: 1px solid rgba(90, 90, 90, 0.5);
+}
+
+.matrixC,
+.matrixA,
+.matrixB {
+    border: 2px solid #404040;
+    position: relative;
+    padding: 5px;
+}
+
+.matrixC {
+    .mixInlineFloat;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.matrixA {
+    .mixInlineFloat;
+}
+
+.matrixB {
+    clear: both;
+    display: inline-block;
+}
+
+#matrixAContainer {
+    .mixInlineFloat;
+    margin-left: 25px;
+    margin-top: 25px;
+    position: relative;
+}
+
+#matrixAContainer span,
+#matrixBContainer span {
+    font-size: @matrixNameFontSizes;
+}
+
+#matrixAContainer span {
+    position: absolute;
+    top: 35%;
+    margin-left: 10px;
+}
+
+#matrixBContainer span {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#matrixBContainer {
+    clear: both;
+    position: relative;
+    .mixInlineFloat;
+}
+
+#matrixBContainer,
+.matrixC {
+    margin-left: @matrixLeftMargin;
+}
+
+.matrixC::before,
+.matrixA::before,
+.matrixB::before {
+    .mixMatrixContainerAbsolut;
+    top: -2px;
+}
+
+.matrixC::after,
+.matrixA::after,
+.matrixB::after {
+    .mixMatrixContainerAbsolut;
+    bottom: -2px;
+}
