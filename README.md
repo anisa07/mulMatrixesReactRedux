@@ -5,19 +5,24 @@ In mathematics, matrix multiplication is a binary operation that takes a pair of
 For create use React, Redux, Webpack and webpack-dev-server
 
 To install
+
 ```
 npm i
 ```
 
 Start webpack-dev-server
+
 ```
 webpack-dev-server
 ```
 
 Open chrome, ff, ie9+
+
 ```
 http://localhost:3334/
 ```
 
-Get 
+Get
+
+![alt tag](https://raw.githubusercontent.com/anisa07/mulMatrixesReactRedux/master/screen_toGit/Screen1.png)
 
