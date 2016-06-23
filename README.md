@@ -24,5 +24,6 @@ http://localhost:3334/
 
 Get
 
-![alt tag](https://raw.githubusercontent.com/anisa07/mulMatrixesReactRedux/master/screen_toGit/Screen1.png)
+![alt tag](https://github.com/anisa07/mulMatrixesReactRedux/blob/master/screen_toGit/screen2.png?raw=true)
 
+You can add matrixes rows, remove them. Fill them with numbers and multiply. The system will give you a notification if data are not correct or matrixes are not suitable 
