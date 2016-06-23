@@ -127,15 +127,15 @@ export default function matrixReducers(state=initialStoreObj, action) {
                         return objectToReturn;
                     } else {
                         status = "fail";
-                        description = "Матрицы должны быть заполнены положительными числами больше 0.";
+                        description = "Matrixes should be filled with positive numbers larger then 0.";
                     }
                 } else {
                     status = "fail";
-                    description = "Такие матрицы нельзя перемножить так как количество столбцов матрицы А не равно количеству строк матриц В.";
+                    description = "These matrixes shouldn't be multiplied cause number of rows of matrix A is not equal to number of rows from matrix B.";
                 }
             } else {
                 status = "fail";
-                description = "Матрицы не определены"
+                description = "Matrixes are not defined."
             }
             objectToReturn[0] = Object.assign({}, state[0], {
                 status: status
